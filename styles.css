@@ -1,3 +1,32 @@
+
+.hidden-post {
+    display: none; /* Oculta os posts secretos */
+}
+
+.post-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-preview {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "c") {  
+        let hiddenPosts = document.querySelectorAll(".hidden-post");
+        hiddenPosts.forEach(post => {
+            post.style.display = "block";
+        });
+    }
+});
+
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 body {
